@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1775858174 source:d:\downloads\unlam\topicos de programacion\proyectos\guia_de_ejercicios\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1775859899 source:d:\downloads\unlam\topicos de programacion\proyectos\guia_de_ejercicios\funciones.c
+	"encabezado.h"
+	<stdio.h>
+
+1775859438 d:\downloads\unlam\topicos de programacion\proyectos\guia_de_ejercicios\encabezado.h
+
