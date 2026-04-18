@@ -35,9 +35,8 @@ float carcularTerminos(int num, int x, float tol)
 
     float t = (float )exponencial(x, num)/ejercicio1(num);
 
-              if (t < tol)
-                  return t;
-    printf("termino %f\n", t);
+    if (t < tol)
+        return t;
 
     return t + carcularTerminos(num+1, x, tol);
 
@@ -50,7 +49,6 @@ float ejercicio3(int x, float tol)
 
 }
 
-
 int exponencial(int base, int e)
 {
 
@@ -62,3 +60,31 @@ int exponencial(int base, int e)
     return resultado;
 }
 
+
+float ejercicio4(float a, float tol){
+
+
+
+    return calcularTerminosRaiz(1,a, tol);
+
+}
+
+float calcularTerminosRaiz(float r1, float a, float tol){
+
+    float r2 = .5*(r1+a/r1);
+
+    printf("r2 %f\n", r2);
+    printf("diferencia %f\n", (r1-r2));
+
+    if(modulo(r1-r2)<tol)
+        return r2;
+
+    return calcularTerminosRaiz(r2, a, tol);
+
+}
+
+float modulo(float a){
+
+    return a<0?-a:a;
+
+}

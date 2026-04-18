@@ -4,17 +4,16 @@
 
 int main()
 {
-    int a;
-    float resultado, b;
+    float a, b;
 
-    a=b=resultado=0;
+    a=b=0;
 
     printf("ingrese numero x\n");
-    scanf("%d", &a);
+    scanf("%f", &a);
     printf("ingrese numero tol\n");
     scanf(" %f", &b);
 
-    printf("e a la x %f ",ejercicio3(a,b));
+    printf("raiz %f ",ejercicio4(a,b));
 
     return 0;
 }

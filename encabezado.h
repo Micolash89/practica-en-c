@@ -7,6 +7,9 @@ int ejercicio1(int);
 float ejercicio2(int, int);
 float ejercicio3(int, float);
 int exponencial(int, int);
-float calcularTerminos(int,int,float);
+float calcularTerminos(int, int, float);
+float ejercicio4(float, float);
+float calcularTerminosRaiz(float, float, float );
+float modulo(float);
 
 #endif // ENCABEZADO_H_INCLUDED
