@@ -11,5 +11,6 @@ float calcularTerminos(int, int, float);
 float ejercicio4(float, float);
 float calcularTerminosRaiz(float, float, float );
 float modulo(float);
+int ejercicio5(int, int, int);
 
 #endif // ENCABEZADO_H_INCLUDED

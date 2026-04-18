@@ -4,16 +4,12 @@
 
 int main()
 {
-    float a, b;
-
-    a=b=0;
+    int a;
 
     printf("ingrese numero x\n");
-    scanf("%f", &a);
-    printf("ingrese numero tol\n");
-    scanf(" %f", &b);
+    scanf("%d", &a);
 
-    printf("raiz %f ",ejercicio4(a,b));
+    printf("el número %d pertenece a figonacci? %s ",a, ejercicio5(1,1,a)?"si":"no");
 
     return 0;
 }

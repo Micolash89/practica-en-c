@@ -88,3 +88,16 @@ float modulo(float a){
     return a<0?-a:a;
 
 }
+
+int ejercicio5(int a, int b, int num){
+
+    int t = a+b;
+
+    printf("%d ", t);
+
+    if (num < t)
+        return 0;
+
+    return num==t ? 1 : ejercicio5(b, t, num);
+
+}
