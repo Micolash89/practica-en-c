@@ -23,6 +23,6 @@ int calcularDivisor(int, int);
 int ejercicio8(int ,int );
 void ejercicio9(int ,int );
 int ejercicio10(int);
-
+int ejercicio11(int);
 
 #endif // ENCABEZADO_H_INCLUDED
