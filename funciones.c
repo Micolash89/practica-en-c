@@ -182,3 +182,8 @@ int ejercicio11(int n){
     return n%2==0?n+ejercicio11(n-1):ejercicio11(n-1);
 }
 
+
+int ejercicio12(int n){
+
+    return ejercicio11(n-1);
+}
