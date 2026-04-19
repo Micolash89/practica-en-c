@@ -25,5 +25,7 @@ void ejercicio9(int ,int );
 int ejercicio10(int);
 int ejercicio11(int);
 int ejercicio12(int);
+int ejercicio13(int);
+int esPrimo(int,int,int);
 
 #endif // ENCABEZADO_H_INCLUDED

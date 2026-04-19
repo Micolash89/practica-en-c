@@ -187,3 +187,29 @@ int ejercicio12(int n){
 
     return ejercicio11(n-1);
 }
+
+int ejercicio13(int n){
+
+    if(n==0)
+        return 0;
+
+    return esPrimo(n,1,0);
+
+}
+
+
+int esPrimo(int n, int den,int flac){
+
+        if(flac==2){
+            return n==(den-1);
+        }
+
+        if(n%den==0)
+            flac++;
+
+    printf("resto: %d\n",n%den);
+
+    return esPrimo(n,den+1,flac);
+
+}
+

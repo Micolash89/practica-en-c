@@ -10,7 +10,7 @@ int main()
     scanf("%d", &a);
 
 
-    printf("la suma de los primeros %d naturales es : %d",a,ejercicio12(a));
+    printf("el numero %d es primo : %s",a,ejercicio13(a)?"si":"no");
 
     return 0;
 }
