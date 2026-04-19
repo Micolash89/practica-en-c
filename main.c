@@ -12,7 +12,7 @@ int main()
     printf("ingrese numero b");
     scanf(" %d", &b);
 
-    printf("%dX%d es: %d ",a,b, b<a?ejercicio8(a,b):ejercicio8(b,a));
+    ejercicio9(a,b);
 
     return 0;
 }

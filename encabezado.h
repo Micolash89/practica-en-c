@@ -15,14 +15,13 @@ float calcularTerminosRaiz(float, float, float );
 float modulo(float);
 int ejercicio5(int, int, int);
 
-float ejercicio6(int,float);//reacer
+float ejercicio6(int,float);//rehacer
 float calcularTerminosSeno(int, int, float);
 
 char * ejercicio7(int);
-
 int calcularDivisor(int, int);
-
-int ejercicio8(int,int);
+int ejercicio8(int ,int );
+void ejercicio9(int ,int );
 
 
 

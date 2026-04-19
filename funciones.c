@@ -157,5 +157,14 @@ int ejercicio8(int a , int b){
 
 }
 
+void ejercicio9(int a, int b){
 
+    if(b==0){
+        printf("error\n");
+        return ;
+    }
+
+    printf("cociente %d resto %d de %d/%d",a/b,a%b,a,b );
+
+}
 
