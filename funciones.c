@@ -61,15 +61,15 @@ int exponencial(int base, int e)
 }
 
 
-float ejercicio4(float a, float tol){
-
-
+float ejercicio4(float a, float tol)
+{
 
     return calcularTerminosRaiz(1,a, tol);
 
 }
 
-float calcularTerminosRaiz(float r1, float a, float tol){
+float calcularTerminosRaiz(float r1, float a, float tol)
+{
 
     float r2 = .5*(r1+a/r1);
 
@@ -83,17 +83,17 @@ float calcularTerminosRaiz(float r1, float a, float tol){
 
 }
 
-float modulo(float a){
+float modulo(float a)
+{
 
     return a<0?-a:a;
 
 }
 
-int ejercicio5(int a, int b, int num){
+int ejercicio5(int a, int b, int num)
+{
 
     int t = a+b;
-
-    printf("%d ", t);
 
     if (num < t)
         return 0;
@@ -101,3 +101,50 @@ int ejercicio5(int a, int b, int num){
     return num==t ? 1 : ejercicio5(b, t, num);
 
 }
+
+float ejercicio6(int n, float tol)
+{
+
+    return (n + calcularTerminosSeno(3,-n,tol));
+}
+
+
+float calcularTerminosSeno(int x, int n, float tol)
+{
+
+    float t = (float)exponencial(n,x)/ejercicio1(x);
+
+    if(modulo(t)<tol)
+        return t;
+
+    return t+calcularTerminosSeno(x+2,-1*n,tol);
+
+}
+
+
+char * ejercicio7(int a)
+{
+
+    int resultado = 1;
+
+    if(a!=1)
+        resultado += calcularDivisor(a, a-1);
+
+    if(resultado == a)
+        return "perfecto";
+    if(resultado<a)
+        return"deficiente";
+    return "abundante";
+
+}
+
+int calcularDivisor(int a, int b)
+{
+
+    if(b==1)
+        return 0;
+
+    return a%b!=0 ?calcularDivisor(a,b-1): ((a/b) + calcularDivisor(a,b-1));
+
+}
+

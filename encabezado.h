@@ -1,6 +1,8 @@
 #ifndef ENCABEZADO_H_INCLUDED
 #define ENCABEZADO_H_INCLUDED
 
+
+//Tipos de datos del lenguaje. Estructuras de control. Estructuras iterativas.
 int sumar(int, int);
 void saludar();
 int ejercicio1(int);
@@ -12,5 +14,14 @@ float ejercicio4(float, float);
 float calcularTerminosRaiz(float, float, float );
 float modulo(float);
 int ejercicio5(int, int, int);
+
+float ejercicio6(int,float);//reacer
+float calcularTerminosSeno(int, int, float);
+
+char * ejercicio7(int);
+
+int calcularDivisor(int, int);
+
+
 
 #endif // ENCABEZADO_H_INCLUDED

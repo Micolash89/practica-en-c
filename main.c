@@ -5,11 +5,12 @@
 int main()
 {
     int a;
+    float b;
 
     printf("ingrese numero x\n");
     scanf("%d", &a);
 
-    printf("el número %d pertenece a figonacci? %s ",a, ejercicio5(1,1,a)?"si":"no");
+    printf("el numero %d es: %s ",a, ejercicio7(a));
 
     return 0;
 }
