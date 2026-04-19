@@ -148,3 +148,14 @@ int calcularDivisor(int a, int b)
 
 }
 
+int ejercicio8(int a , int b){
+
+    if(a==0 || b==0)
+        return 0;
+
+    return a+ ejercicio8(a,b-1);
+
+}
+
+
+

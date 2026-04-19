@@ -4,13 +4,15 @@
 
 int main()
 {
-    int a;
-    float b;
+    int a,b;
 
-    printf("ingrese numero x\n");
+    printf("ingrese numero a\n");
     scanf("%d", &a);
 
-    printf("el numero %d es: %s ",a, ejercicio7(a));
+    printf("ingrese numero b");
+    scanf(" %d", &b);
+
+    printf("%dX%d es: %d ",a,b, b<a?ejercicio8(a,b):ejercicio8(b,a));
 
     return 0;
 }

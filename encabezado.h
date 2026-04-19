@@ -22,6 +22,8 @@ char * ejercicio7(int);
 
 int calcularDivisor(int, int);
 
+int ejercicio8(int,int);
+
 
 
 #endif // ENCABEZADO_H_INCLUDED
