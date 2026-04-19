@@ -4,15 +4,13 @@
 
 int main()
 {
-    int a,b;
+    int a;
 
     printf("ingrese numero a\n");
     scanf("%d", &a);
 
-    printf("ingrese numero b");
-    scanf(" %d", &b);
 
-    ejercicio9(a,b);
+    printf("la suma de los primeros %d naturales es : %d",a,ejercicio10(a));
 
     return 0;
 }

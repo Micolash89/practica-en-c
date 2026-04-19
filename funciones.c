@@ -168,3 +168,9 @@ void ejercicio9(int a, int b){
 
 }
 
+int ejercicio10(int n){
+
+    return n==0? 0: n+ejercicio10(n-1);
+
+}
+
