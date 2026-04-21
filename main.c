@@ -10,7 +10,7 @@ int main()
     scanf("%d", &a);
 
 
-    printf("el numero %d es primo : %s",a,ejercicio13(a)?"si":"no");
+    printf("factorial de %d %d",a,FACTORIAL(a));
 
     return 0;
 }

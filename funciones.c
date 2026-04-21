@@ -148,7 +148,8 @@ int calcularDivisor(int a, int b)
 
 }
 
-int ejercicio8(int a , int b){
+int ejercicio8(int a, int b)
+{
 
     if(a==0 || b==0)
         return 0;
@@ -157,9 +158,11 @@ int ejercicio8(int a , int b){
 
 }
 
-void ejercicio9(int a, int b){
+void ejercicio9(int a, int b)
+{
 
-    if(b==0){
+    if(b==0)
+    {
         printf("error\n");
         return ;
     }
@@ -168,13 +171,15 @@ void ejercicio9(int a, int b){
 
 }
 
-int ejercicio10(int n){
+int ejercicio10(int n)
+{
 
     return n==0? 0: n+ejercicio10(n-1);
 
 }
 
-int ejercicio11(int n){
+int ejercicio11(int n)
+{
 
     if(n==0)
         return 0;
@@ -183,12 +188,14 @@ int ejercicio11(int n){
 }
 
 
-int ejercicio12(int n){
+int ejercicio12(int n)
+{
 
     return ejercicio11(n-1);
 }
 
-int ejercicio13(int n){
+int ejercicio13(int n)
+{
 
     if(n==0)
         return 0;
@@ -198,18 +205,32 @@ int ejercicio13(int n){
 }
 
 
-int esPrimo(int n, int den,int flac){
+int esPrimo(int n, int den,int flac)
+{
 
-        if(flac==2){
-            return n==(den-1);
-        }
+    if(flac==2)
+    {
+        return n==(den-1);
+    }
 
-        if(n%den==0)
-            flac++;
-
-    printf("resto: %d\n",n%den);
+    if(n%den==0)
+        flac++;
 
     return esPrimo(n,den+1,flac);
 
 }
 
+//tengo que persarla mejor
+int redondeo(int x)
+{
+
+    if(x<=10)
+        return x%10?;
+    if(x<=100)
+        return x%100?;
+    if(x<=1000)
+        return x%1000?;
+    if(x<=10000)
+        return x%10000?;
+
+}
