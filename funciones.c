@@ -223,7 +223,7 @@ int esPrimo(int n, int den,int flac)
 //tengo que persarla mejor
 int redondeo(int x)
 {
-
+    /*
     if(x<=10)
         return x%10?;
     if(x<=100)
@@ -233,4 +233,229 @@ int redondeo(int x)
     if(x<=10000)
         return x%10000?;
 
+    */
+    return 0;
+
 }
+
+
+///////////////VECTORES ////////////////////
+
+void ejercicio1_1(int *vec, int pos, int e)
+{
+
+    if(pos>TAM)
+        return;
+
+    vec = vec + pos - 1;
+
+    *vec = e;
+
+}
+
+void cargarDesplazar(int *vec, int pos, int e)
+{
+    int aux,i=0;
+
+    if(pos>TAM)
+        return;
+
+    vec = vec + pos - 1;
+    i= pos - 1;
+
+    while( i < TAM )
+    {
+        aux=*vec;
+        *vec=e;
+        vec++;
+        i++;
+        e=aux;
+    }
+}
+
+void cargarPos1Desplazar(int *vec, int e)
+{
+
+    int aux, i=0;
+
+    while(i<TAM)
+    {
+        aux=*vec;
+        *vec=e;
+        vec++;
+        i++;
+        e=aux;
+    }
+
+}
+
+void mostrarVec(int *vec)
+{
+
+    for(int i=0; i<TAM; i++ )
+    {
+        printf("%d ",*vec);
+        vec++;
+    }
+
+}
+
+void mostrarCad(char *vec)
+{
+
+    for(int i=0; i<TAM; i++ )
+    {
+        printf("%c",*vec);
+        vec++;
+    }
+
+}
+
+void cargarVec(int *vec)
+{
+
+    for(int i = 0; i<TAM; i++)
+    {
+        printf("ingrese elemento %d\n",i+1);
+        scanf(" %d",vec);
+        vec++;
+    }
+
+}
+
+void ejercicio1_2(int *vec,int e)
+{
+
+    int i=0;
+    while(*vec<e && i!=TAM-1)
+    {
+        i++;
+        vec++;
+    }
+
+    if(*vec>e)
+        cargarPos1Desplazar(vec,e);
+}
+
+void ejercicio1_3(int *vec,int pos)
+{
+
+    if(pos>TAM)
+        return;
+
+    vec=vec+pos-1;
+
+    for(int i=0; i<(TAM-pos); i++)
+    {
+        *vec=*(vec+1);
+        vec++;
+    }
+}
+
+void ejercicio1_4(int *vec,int e)
+{
+
+    int i=0,flac=0;
+
+    while(i!=TAM && flac!=1)
+    {
+
+        if(*vec==e)
+        {
+            ejercicio1_3(vec,i);
+            flac=1;
+        }
+
+        vec++;
+        i++;
+    }
+}
+
+void ejercicio1_5(int *vec,int e)
+{
+
+    int i=0;
+
+    while(i!=TAM )
+    {
+        if(*vec==e)
+            eliminar1ElemDesplazar(vec,TAM-i);
+        else
+        {
+            vec++;
+            i++;
+        }
+    }
+}
+
+void eliminar1ElemDesplazar(int * vec,int tam)
+{
+
+    for(int i=0; i<tam; i++)
+    {
+        *vec=*(vec+1);
+        vec++;
+    }
+
+}
+
+
+int ejercicio1_6(char *vec, int tam)
+{
+
+    int flac=0;
+    char *last = vec+tam-1;
+
+    for(int i=0; i<tam/2; i++)
+    {
+        if(*vec!=*last)
+            flac=1;
+        last--;
+        vec++;
+    }
+
+    return flac==0;
+}
+
+
+
+int ejercicio1_7(char *vec)
+{
+    int mult=1,num=0, tam = strlen_(vec);
+
+
+    if(tam==0)
+        return 0;
+
+    for(int i=0;i<tam;i++)
+        mult*=10;
+
+    while(tam!=0){
+
+        num+= ((*vec)-'0') * mult;
+        printf("%d\n",num);
+        mult/=10;
+        tam--;
+        vec++;
+    }
+
+
+    return num;
+
+}
+
+int strlen_(char *vec)
+{
+
+    int i=0;
+
+    while(*vec!='\0')
+    {
+        vec++;
+        i++;
+    }
+
+    return i+1;
+
+}
+

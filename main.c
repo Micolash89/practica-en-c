@@ -4,13 +4,15 @@
 
 int main()
 {
-    int a;
+    char vec[TAM]={'1','2','3','4','5','\0'};
+    //char vec[TAM]="solos";
+    //char c = '1';
 
-    printf("ingrese numero a\n");
-    scanf("%d", &a);
+   // printf("la palabra es palíndromo? %s\n",ejercicio1_6(vec,TAM)?"si":"no");
 
+    //mostrarCad(vec);
 
-    printf("factorial de %d %d",a,FACTORIAL(a));
+    printf("%d",ejercicio1_7(vec));
 
     return 0;
 }
