@@ -549,4 +549,61 @@ void sacarEspaciosAdelante(char *vec)
     *aux2='\0';
 
 }
+void ejercicio1_10(char * vec)
+{
 
+    char vec2[] = "abcdghijkoqtuv";
+    char * aux=vec;
+    int pos=1;
+
+    while(*aux!='\0')
+    {
+
+        if(includeCad(vec2,aux))
+            ofuscar(aux,vec2,pos);
+
+        pos++;
+        aux++;
+    }
+
+}
+
+int includeCad(char * vec1, char *vec2)
+{
+
+    int flac=0;
+
+    while(flac==0&&*vec1!='\0')
+    {
+
+        if(*vec1==*vec2)
+            flac=1;
+
+        vec1++;
+    }
+
+    return flac!=0;
+
+}
+
+void ofuscar(char *vec1,char *vec2,int cont)
+{
+
+    int last= strlen_(vec2) - 2;
+
+    while(*vec1!=*vec2)
+        vec2++;
+
+    while(cont!=0)
+    {
+
+        if(*vec2=='a')
+            vec2=vec2+last;
+        else
+            vec2--;
+
+        cont--;
+
+    }
+    *vec1=*vec2;
+}
