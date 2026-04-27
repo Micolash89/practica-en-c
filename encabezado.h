@@ -58,6 +58,8 @@ void ejercicio1_5(int *,int);
 int ejercicio1_6(char *,int);
 int strlen_(char *);
 int ejercicio1_7(char *);
-
+int ejercicio1_8(char *,char *);
+char* ejercicio1_9(char *);
+void sacarEspaciosAdelante(char *);
 
 #endif // ENCABEZADO_H_INCLUDED

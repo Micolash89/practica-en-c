@@ -302,8 +302,9 @@ void mostrarVec(int *vec)
 
 void mostrarCad(char *vec)
 {
+    int tam=strlen_(vec);
 
-    for(int i=0; i<TAM; i++ )
+    for(int i=0; i<tam; i++ )
     {
         printf("%c",*vec);
         vec++;
@@ -417,33 +418,6 @@ int ejercicio1_6(char *vec, int tam)
     return flac==0;
 }
 
-
-
-int ejercicio1_7(char *vec)
-{
-    int mult=1,num=0, tam = strlen_(vec);
-
-
-    if(tam==0)
-        return 0;
-
-    for(int i=0;i<tam;i++)
-        mult*=10;
-
-    while(tam!=0){
-
-        num+= ((*vec)-'0') * mult;
-        printf("%d\n",num);
-        mult/=10;
-        tam--;
-        vec++;
-    }
-
-
-    return num;
-
-}
-
 int strlen_(char *vec)
 {
 
@@ -456,6 +430,123 @@ int strlen_(char *vec)
     }
 
     return i+1;
+
+}
+
+int ejercicio1_7(char *vec)
+{
+    int mult=1,num=0, tam = strlen_(vec);
+    char * last=vec+tam-2;
+
+    if(tam==0)
+        return 0;
+
+    for(int i=0; i<tam-1; i++)
+    {
+
+        num+= ((*last)-'0')*mult;
+        mult*=10;
+        last--;
+    }
+
+    return num;
+
+}
+
+int ejercicio1_8(char *vec,char *vec2)
+{
+
+    char *aux = vec2, *vec1=vec;
+    int cont=0,cont2=0, length=strlen_(vec2)-1;
+
+    if(strlen_(vec1)==0)
+        return 0;
+
+    while(*vec1!='\0')
+    {
+
+        if(*vec1==*aux)
+        {
+
+            while(*vec1==*aux&&*vec1!='\0'&&*aux!='\0')
+            {
+                vec1++;
+                aux++;
+                cont2++;
+            }
+            if(cont2==length)
+                cont++;
+            aux=vec2;
+            cont2=0;
+
+        }
+        else
+            vec1++;
+    }
+
+    return cont;
+}
+
+///hacer
+char* ejercicio1_9(char * vec)
+{
+
+    char *aux=vec,*aux2;
+
+    while(*aux=='\n'||*aux=='\t'||*aux==' ')
+        aux++;
+
+    aux2=aux;
+    printf("\n");
+    while(*aux!='\0')
+    {
+
+        if(!ES_MAYUSCULA(*aux))
+        {
+            *aux = (*aux) - 32;
+            aux++;
+        }
+
+        while(*aux!=' '&&*aux!='\0')
+        {
+
+            if(!ES_MINUSCULA(*aux))
+            {
+                *aux=(*aux) + 32;
+
+            }
+            aux++;
+        }
+
+        aux++;
+        if(*aux==' ')
+        {
+            sacarEspaciosAdelante(aux);//normalizar espacios
+        }
+    }
+
+    return aux2;
+
+}
+
+
+void sacarEspaciosAdelante(char *vec)
+{
+
+    char *aux=vec,*aux2=vec ;
+
+    while((*aux=='\n'||*aux=='\t'||*aux==' ')&& *aux != '\0')
+        aux++;
+
+
+    while(*aux!='\0')
+    {
+        *aux2=*aux;
+        aux++;
+        aux2++;
+    }
+
+    *aux2='\0';
 
 }
 
