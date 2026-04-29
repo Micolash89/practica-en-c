@@ -300,6 +300,85 @@ void mostrarVec(int *vec)
 
 }
 
+void ordenarBurbujeo(int *vec,int ce){
+
+    int *ini, *tiv, huboIntercambio=1;
+
+    if(ce==0)
+        return;
+
+    ini=tiv=vec;
+
+    while(ce!=0){
+        huboIntercambio=0;
+        tiv=ini+1;
+        for(int i=1;i<ce-i;i++){
+
+            if(*ini>*tiv){
+                intercambio(ini,tiv);
+                huboIntercambio=1;
+                tiv++;
+            }
+
+        }
+        ini++;
+        ce--;
+    }
+
+}
+
+void ordenarSeleccion(int *vec,int ce){
+
+    int *fin = vec-1;
+    int *mem;
+
+    if(c3==0){
+        return;
+    }
+
+    ce--;
+
+    while(vec<fin){
+
+        *men=buscarMenor(vec,fin)
+    if(*vec<*men){
+        intercambio(vec,men)
+
+        ce--;
+        }
+    }
+
+    vec++;
+
+}
+
+void intercambio(int *a,int *b){
+
+    //multiplicacion
+    *a=(*a)*(*b);
+    *b=(*a)/(*b);
+    *a=(*a)/(*b);
+
+    /*
+    //adiccion
+    *a=(*a)+(*b);
+    *b=(*a)-(*b);
+    *a=(*a)-(*b);
+
+    //diferencia
+    *a=(*a)+(*b);
+    *b=(*a)+(*b);
+    *a=(*b)-(*a);
+    */
+
+}
+
+int * buscarMenor(int *vec1, int *vec2){
+
+
+    return 0;
+}
+
 void mostrarCad(char *vec)
 {
     int tam=strlen_(vec);
@@ -607,3 +686,6 @@ void ofuscar(char *vec1,char *vec2,int cont)
     }
     *vec1=*vec2;
 }
+
+
+
