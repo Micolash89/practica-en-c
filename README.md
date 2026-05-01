@@ -1,4 +1,4 @@
-![Logo UNLAM](unlam-universidad-nacional-de-la-matanza-seeklogo.png)
+<img src="unlam-universidad-nacional-de-la-matanza-seeklogo.png" width="300"/>
 
 # Guía de Ejercicios - Tópicos de Programación
 
@@ -14,8 +14,8 @@
 
 | Campo | Datos |
 |-------|-------|
-| **Carga Horaria** | 96 horas |
-| **Régimen** | Anual |
+| **Carga Horaria** | 64 horas (4 hs semanales) |
+| **Régimen** | Cuatrimestral |
 | **Correlativas** | Algoritmos y Estructura de Datos I |
 | **Código** | 649-3635 |
 
