@@ -64,5 +64,22 @@ void sacarEspaciosAdelante(char *);
 void ejercicio1_10(char *);
 int includeCad(char * vec1, char *vec2);
 void ofuscar(char *,char *,int);
+void intercambio(int *,int *);
+int buscarMenor(int *, int *);
+
+//cadenas
+int strlen2_(const char *);
+char *strcpy_(char *, const char *);
+char *strncpy_(char *, const char *,int);
+char *strcat_(char *, const char *);
+int strcmp_(const char *, const char *);
+int strncmp_(const char *, const char *,int );
+const char *strchr_(const char *,int );
+const char *strrchr_(const char *,int );
+char *strstr_(const char *,const char *);
+char *strtok_(char *,const char *);
+void *memset_(void *ptr, int valor, int n);
+
+
 
 #endif // ENCABEZADO_H_INCLUDED

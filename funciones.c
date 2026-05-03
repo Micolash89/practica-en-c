@@ -325,14 +325,17 @@ void ordenarBurbujeo(int *vec,int ce){
         ce--;
     }
 
+    if(huboIntercambio)
+        return;
+
 }
 
 void ordenarSeleccion(int *vec,int ce){
 
     int *fin = vec-1;
-    int *mem;
+    int men;
 
-    if(c3==0){
+    if(ce==0){
         return;
     }
 
@@ -340,9 +343,9 @@ void ordenarSeleccion(int *vec,int ce){
 
     while(vec<fin){
 
-        *men=buscarMenor(vec,fin)
-    if(*vec<*men){
-        intercambio(vec,men)
+        men=buscarMenor(vec,fin);
+    if(*vec<men){
+        intercambio(vec,&men);
 
         ce--;
         }
@@ -373,7 +376,7 @@ void intercambio(int *a,int *b){
 
 }
 
-int * buscarMenor(int *vec1, int *vec2){
+int buscarMenor(int *vec1, int *vec2){
 
 
     return 0;
@@ -685,6 +688,210 @@ void ofuscar(char *vec1,char *vec2,int cont)
 
     }
     *vec1=*vec2;
+}
+
+//cadenas
+int strlen2_(const char * cad){
+
+    int cont=0;
+
+    while( *cad ){
+        cont++;
+        cad++;
+    }
+
+    return cont;
+
+}
+
+char *strcpy_(char *dest, const char *src){
+
+    char * aux=dest;
+
+    while(*src){
+
+        *dest=*src;
+
+        dest++;
+        src++;
+    }
+
+    *dest='\0';
+
+    return aux;
+}
+
+char *strncpy_(char *dest, const char *src,int ce){
+
+    char * aux= dest;
+
+    while(ce){
+
+        *dest=*src;
+
+        ce--;
+        src++;
+        dest++;
+
+    }
+
+    dest='\0';
+
+    return aux;
+
+}
+
+char *strcat_(char *dest, const char *src){
+
+    char *aux=dest;
+
+    while(*dest)
+        dest++;
+
+    while(*src){
+
+        *dest=*src;
+
+        src++;
+        dest++;
+    }
+
+    *dest='\0';
+
+    return aux;
+
+}
+
+int strcmp_(const char *a, const char *b){
+
+    while(*a == *b && *a && *b){
+        a++;
+        b++;
+    }
+
+    if(*a==*b)
+        return 0;
+
+    return ((*a)-(*b))>0? 1: -1;
+
+
+}
+
+int strncmp_(const char *a, const char *b,int ce){
+
+
+    ce--;
+    while((*a)==(*b) && *a && *b && ce){
+        a++;
+        b++;
+        ce--;
+    }
+
+    if(*a==*b)
+    return 0;
+
+    return (*a)-(*b)>0?1:-1;
+
+}
+
+const char *strchr_(const char *cad,int e){
+
+    const char * aux = cad;
+
+    if(!e)
+        return NULL;
+
+    while(*aux&&*aux!=e)
+        aux++;
+
+    return *aux==e? aux : NULL;
+}
+
+const char *strrchr_(const char *cad,int c){
+
+    int ce = strlen2_(cad) - 1;
+    cad+=ce;
+
+    if(!c)
+        return NULL;
+
+    while(*cad!=c&&ce){
+
+        cad--;
+        ce--;
+    }
+
+    return *cad==c?cad:NULL;
+
+}
+
+char *strstr_(const char *str,const char *sub){
+
+    if (!*sub) return NULL;
+
+    const char *aux=sub;
+    const char *ini=str;
+
+    while((*str)&&(*sub)){
+            sub=aux;
+            ini=str;
+
+        while(*sub&&((*sub)==(*str))){
+            sub++;
+            str++;
+        }
+
+        if(*sub)
+            str++;
+
+    }
+
+    return !*sub ?(char *) ini:NULL;
+}
+
+
+//11 hacer de nuevo
+char *strtok_(char *str, const char *delim){
+
+    if(!*delim||!*str) return NULL;
+
+    char * aux=str,
+         * ini=str;
+
+    while(*str){
+        ini=str;
+
+        while(*str!=*delim&&*delim)
+        {
+            str++;
+            delim++;
+
+        }
+            if(!*delim||*delim==*str)
+            {
+                *str='\0';
+            }
+
+                str++;
+    }
+
+    str=aux;
+
+    return ini;
+
+}
+
+void *memset_(void *ptr, int valor, int n){
+    char * aux=(char *) ptr;
+
+    if(!n) return NULL;
+    while(n){
+        *aux=valor;
+        aux++;
+        n--;
+    }
+    return ptr;
+
 }
 
 
