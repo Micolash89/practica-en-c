@@ -1,16 +1,21 @@
-<img src="unlam-universidad-nacional-de-la-matanza-seeklogo.png" width="300"/>
+# 💻 Guía de Ejercicios - Tópicos de Programación
 
-# Guía de Ejercicios - Tópicos de Programación
-
-**Universidad Nacional de La Matanza**  
-**Carrera**: Ingeniería en Informática  
-**Materia**: Tópicos de Programación  
-**Cuatrimestre**: 1er Cuatrimestre 2026  
-**Año**: 3er Año - 1er Cuatrimestre  
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div style="flex: 1;">
+    <p><strong>Universidad Nacional de La Matanza</strong></p>
+    <p><strong>Carrera:</strong> Ingeniería en Informática</p>
+    <p><strong>Materia:</strong> Tópicos de Programación</p>
+    <p><strong>Cuatrimestre:</strong> 1er Cuatrimestre 2026</p>
+    <p><strong>Año:</strong> 3er Año - 1er Cuatrimestre</p>
+  </div>
+  <div style="flex: 1; text-align: right;">
+    <img src="unlam-universidad-nacional-de-la-matanza-seeklogo.png" width="100" alt="UNLAM Logo"/>
+  </div>
+</div>  
 
 ---
 
-## Información de la Cátedra
+## 📚 Información de la Cátedra
 
 | Campo | Datos |
 |-------|-------|
@@ -19,14 +24,14 @@
 | **Correlativas** | Algoritmos y Estructura de Datos I |
 | **Código** | 649-3635 |
 
-### Objetivos de la Materia
+### 🎯 Objetivos de la Materia
 
 - Introducir al alumno en los conceptos fundamentales de la programación imperativa y modular.
 - Desarrollar las capacidades de abstracción y decompose lógica de problemas.
 - Implementar soluciones algorítmicas en lenguaje C.
 - Afianzar el uso de funciones, recursividad y estructuras de datos básicas.
 
-### Contenido Programático
+### 📖 Contenido Programático
 
 1. **Programación Modular**
    - Funciones y procedimientos
@@ -49,20 +54,7 @@
 
 ---
 
-## Descripción del Proyecto
-
-Este proyecto contiene la resolución de la guía de ejercicios de la materia Tópicos de Programación, implementada en lenguaje C. Cada ejercicio representa un problema típico de programación que integra los conceptos enseñados en la cursada.
-
-Los ejercicios abordan temas como:
-- Cálculo de factoriales y combinaciones
-- Series numéricas (exponencial, seno)
-- Algoritmos matemáticos (raíz cuadrada, números primos, números perfectos)
-- Operaciones aritméticas (multiplicación, división)
-- Sumatorias y series especiales
-
----
-
-## Ejercicios Implementados
+## 📋 Ejercicios Implementados
 
 | Ejercicio | Descripción |
 |-----------|--------------|
@@ -82,7 +74,7 @@ Los ejercicios abordan temas como:
 
 ---
 
-## Estructura del Proyecto
+## 🏗️ Estructura del Proyecto
 
 ```
 guia_de_ejercicios/
@@ -97,20 +89,20 @@ guia_de_ejercicios/
 
 ---
 
-## Cómo Compilar y Ejecutar
+## 🔨 Cómo Compilar y Ejecutar
 
-### Requisitos
+### ⚙️ Requisitos
 
 - Compilador GCC (MinGW) o CodeBlocks con compilador C
 - Sistema operativo: Windows
 
-### Compilación Manual
+### 🔧 Compilación Manual
 
 ```bash
 gcc -o guia_de_ejercicios.exe main.c funciones.c
 ```
 
-### Ejecución
+### ▶️ Ejecución
 
 ```bash
 ./guia_de_ejercicios.exe
@@ -120,7 +112,7 @@ O simplemente ejecuta el archivo `guia_de_ejercicios.exe` generado en la carpeta
 
 ---
 
-## Tecnologías
+## 💡 Tecnologías
 
 - **Lenguaje**: C
 - **Compilador**: GCC / MinGW
@@ -129,7 +121,7 @@ O simplemente ejecuta el archivo `guia_de_ejercicios.exe` generado en la carpeta
 
 ---
 
-## Autor
+## ✍️ Autor
 
 Proyecto desarrollado para la cursada de Tópicos de Programación  
 Universidad Nacional de La Matanza (UNLAM)  
